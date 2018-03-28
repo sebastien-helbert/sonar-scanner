@@ -18,7 +18,7 @@ if [ "$1" = 'sonar-scanner' ]; then
 	fi
 	
 	if [ -z "${SONAR_SOURCES-}" ]; then
-	  echo ">>> Environment variable SONAR_SOURCES, using /sonar-sources as default source directory."
+	  echo ">>> Environment variable SONAR_SOURCES is not defined, using /sonar-sources as default source directory."
 	  export SONAR_SCANNER_OPTS="${SONAR_SCANNER_OPTS} -Dsonar.sources=/sonar-sources"
 	else
 	  export SONAR_SCANNER_OPTS="${SONAR_SCANNER_OPTS} -Dsonar.sources=$SONAR_SOURCES"
